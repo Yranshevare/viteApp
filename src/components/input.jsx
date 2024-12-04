@@ -1,7 +1,8 @@
 import React,{useId} from 'react'
 
-const Input = React.forwardRef(
+const Input = React.forwardRef(     //as this function is returning the reference of an input felid it should be inside the forwardRef   
     function Input ({ label, type = "text", className = "", ...props}, ref){
+        const id = useId()      //create a unique id
         return(
             <div className='w-full'>
                 {
